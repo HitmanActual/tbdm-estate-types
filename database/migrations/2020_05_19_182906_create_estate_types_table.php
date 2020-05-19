@@ -15,7 +15,7 @@ class CreateEstateTypesTable extends Migration
     {
         Schema::create('estate_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('estate_type');
+            $table->enum('estate_type',['Rentals','Sales']);
             $table->timestamps();
             $table->softDeletes();
         });
